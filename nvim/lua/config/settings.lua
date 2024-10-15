@@ -11,29 +11,10 @@ vim.opt.expandtab = true
 -- relative line numbers
 vim.opt.rnu = true
 
--- sync clipboard
-vim.opt.clipboard = "unnamedplus"
+-- always display sign column
+vim.opt.signcolumn = "yes"
 
-if vim.fn.has("wsl") == 1 then
-		vim.api.nvim_exec(
-			[[
-			let g:clipboard = {
-          \   'name': 'win32yank-wsl',
-          \   'copy': {
-          \      '+': 'win32yank.exe -i --crlf',
-          \      '*': 'win32yank.exe -i --crlf',
-          \    },
-          \   'paste': {
-          \      '+': 'win32yank.exe -o --lf',
-          \      '*': 'win32yank.exe -o --lf',
-          \   },
-          \   'cache_enabled': 0,
-          \ }
-		]],
-			true
-		)
-	end
-
+-- TODO: set up clipboard
 
 -- persistent undo
 vim.opt.undofile = true
