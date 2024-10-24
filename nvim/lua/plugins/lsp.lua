@@ -11,7 +11,13 @@ return {
 			require("mason").setup({})
 			require("mason-lspconfig").setup({})
 
-            require'lspconfig'.lua_ls.setup {
+            local conf = require('lspconfig')
+
+            conf.ts_ls.setup {}
+
+            conf.cds_lsp.setup {}
+
+            conf.lua_ls.setup {
                 on_init = function(client)
                     if client.workspace_folders then
                         local path = client.workspace_folders[1].name

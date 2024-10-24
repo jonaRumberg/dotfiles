@@ -14,7 +14,11 @@ vim.opt.rnu = true
 -- always display sign column
 vim.opt.signcolumn = "yes"
 
--- TODO: set up clipboard
-
 -- persistent undo
 vim.opt.undofile = true
+
+-- autocommands
+vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+    pattern = { "*.cds" },
+    command = "set filetype=cds",
+})
