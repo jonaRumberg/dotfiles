@@ -38,3 +38,6 @@ Thumbs.db
 
 # Ignore gh config
 gh/
+
+# ignore tmux plugins
+tmux/plugins

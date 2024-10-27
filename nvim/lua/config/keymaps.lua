@@ -15,6 +15,7 @@ vim.api.nvim_set_keymap("n", "<leader>w", "<C-w>", { noremap = true, silent = tr
 
 -- lsp key remaps
 vim.api.nvim_set_keymap("n", "gd", "<C-]>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "gr", '<cmd>lua vim.lsp.buf.references()<CR>', { noremap = true, silent = true })
 
 -- oil remap
 vim.api.nvim_set_keymap("n", "<leader>pv", "<CMD>Oil<CR>", { desc = "Open parent directory" })
